@@ -12,6 +12,8 @@ public class LexerGrammar {
     public static final String OPENING_PARENTHESIS = "(";
     public static final String CLOSING_PARENTHESIS = ")";
     public static final String SQUARE_ROOT = "sqrt";
+    public static final String COSINUS = "cos";
+    public static final String SINUS = "sin";
     public static final String DOT = ".";
     public static final String POWER = "^";
     

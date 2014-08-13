@@ -2,14 +2,17 @@ package fr.alsace.lacroix.calculator;
 
 import fr.alsace.lacroix.analyser.Analyser;
 import fr.alsace.lacroix.lexer.Lexer;
+import fr.alsace.lacroix.utils.StringUtils;
 import fr.alsace.lacroix.utils.Token;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -18,13 +21,51 @@ import javafx.scene.control.Label;
 public class SampleController implements Initializable {
     
     @FXML
-    private Label label;
-    
+    private TextField expression;
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private Button oneButton;
+    @FXML
+    private Button twoButton;
+    @FXML
+    private Button threeButton;
+    @FXML
+    private Button plusButton;
+    @FXML
+    private Button fourButton;
+    @FXML
+    private Button fiveButton;
+    @FXML
+    private Button sixButton;
+    @FXML
+    private Button minusButton;
+    @FXML
+    private Button sevenButton;
+    @FXML
+    private Button eightButton;
+    @FXML
+    private Button nineButton;
+    @FXML
+    private Button multiplyButton;
+    @FXML
+    private Button cancelButton;
+    @FXML
+    private Button zeroButton;
+    @FXML
+    private Button dotButton;
+    @FXML
+    private Button divideButton;
+    @FXML
+    private Button openingParenthesisButton;
+    @FXML
+    private Button closingParenthesisButton;
+    @FXML
+    private Button powerButton;
+    @FXML
+    private Button squareRootButton;
+    @FXML
+    private Button eraseButton;
+    @FXML
+    private Button calculateButton;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -93,4 +134,119 @@ public class SampleController implements Initializable {
                 break;
         }
     }    
+
+    @FXML
+    private void handleExpressionAction(KeyEvent event) {
+        
+    }
+
+    @FXML
+    private void handleOneAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "1");
+    }
+
+    @FXML
+    private void handleTwoAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "2");
+    }
+
+    @FXML
+    private void handleThreeAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "3");
+    }
+
+    @FXML
+    private void handlePlusAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "+");
+    }
+
+    @FXML
+    private void handleFourAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "4");
+    }
+
+    @FXML
+    private void handleFiveAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "5");
+    }
+
+    @FXML
+    private void handleSixAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "6");
+    }
+
+    @FXML
+    private void handleMinusAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "-");
+    }
+
+    @FXML
+    private void handleSevenAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "7");
+    }
+
+    @FXML
+    private void handleEightAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "8");
+    }
+
+    @FXML
+    private void handleNineAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "9");
+    }
+
+    @FXML
+    private void handleMultiplyAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "*");
+    }
+
+    @FXML
+    private void handleCancelAction(MouseEvent event) {
+        this.expression.setText(StringUtils.eraseLastChars(this.expression.getText(), 1));
+    }
+
+    @FXML
+    private void handleZeroAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "0");
+    }
+
+    @FXML
+    private void handleDotAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + ".");
+    }
+
+    @FXML
+    private void handleDivideAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "/");
+    }
+
+    @FXML
+    private void handleOpeningParenthesisAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "(");
+    }
+
+    @FXML
+    private void handleClosingParenthesisAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + ")");
+    }
+
+    @FXML
+    private void handlePowerAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "^");
+    }
+
+
+    @FXML
+    private void handleEraseAction(MouseEvent event) {
+        this.expression.setText("");
+    }
+
+    @FXML
+    private void handleCalculateAction(MouseEvent event) {
+    }
+
+    @FXML
+    private void handleSquareRootAction(MouseEvent event) {
+        this.expression.setText(this.expression.getText() + "sqrt(");
+    }
 }
