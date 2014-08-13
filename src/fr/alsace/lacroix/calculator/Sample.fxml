@@ -328,7 +328,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <TextField alignment="CENTER_RIGHT" focusTraversable="false" layoutX="93.0" layoutY="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TextField fx:id="answer" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="93.0" layoutY="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <font>
                                     <Font name="Courier New" size="14.0" />
                                  </font>

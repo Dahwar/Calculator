@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
@@ -66,6 +67,8 @@ public class SampleController implements Initializable {
     private Button eraseButton;
     @FXML
     private Button calculateButton;
+    @FXML
+    private TextField answer;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -75,69 +78,55 @@ public class SampleController implements Initializable {
         // Lexer lexer = new Lexer("3-(4+3)-4*3(2+3)+sqrt(4)");
         // Lexer lexer = new Lexer("-365+5(-8-(2+3))-((2+3)*5)((sqrt(sqrt((2+3)^5)^(7^2))*2+3)-6/(2/3))/(-7)^2");
         // Lexer lexer = new Lexer("3-7-5");
-        Lexer lexer = new Lexer("sqrt(sqrt(81))");
+        // Lexer lexer = new Lexer("sqrt(sqrt(81))");
+    }    
+
+    public String calculate(String s) {
+        Lexer lexer = new Lexer(s);
         switch(lexer.parse()) {
             case Lexer.PARSE_SUCCESS:
-                System.out.println("Parsing success !");
                 Analyser analyser = new Analyser();
                 List<Token> listOfTokens = analyser.tokensToList(lexer);
                 if(!listOfTokens.isEmpty()) {
-                    System.out.println(analyser.buildTree(listOfTokens).eval());
+                    return analyser.buildTree(listOfTokens).eval().toString();
                 }
-               
-//                Node tree = analyser.analyse(lexer);
-//                if(tree != null) {
-//                    System.out.println(tree.eval());
-//                }
-                break;
+                return "Empty string.";
             case Lexer.BUFFER_IS_NOT_NUMERIC:
-                System.err.println("The buffer is not a numeric.");
-                break;
+                return "The buffer is not a numeric.";
             case Lexer.PLUS_AFTER_ILLEGAL_CHARACTER:
-                System.err.println("Find a not allowed caracter '+'.");
-                break;
+                return "Find a not allowed caracter '+'.";
             case Lexer.MINUS_AFTER_ILLEGAL_CHARACTER:
-                System.err.println("Find a not allowed caracter '-'.");
-                break;
+                return "Find a not allowed caracter '-'.";
             case Lexer.MULTIPLY_AFTER_ILLEGAL_CHARACTER:
-                System.err.println("Find a not allowed caracter '*'.");
-                break;
+                return "Find a not allowed caracter '*'.";
             case Lexer.DIVIDE_AFTER_ILLEGAL_CHARACTER:
-                System.err.println("Find a not allowed caracter '/'.");
-                break;
+                return "Find a not allowed caracter '/'.";
             case Lexer.CLOSING_PARENTHESIS_AFTER_ILLEGAL_CHARACTER:
-                System.err.println("Find a not allowed caracter ')'.");
-                break;
+                return "Find a not allowed caracter ')'.";
             case Lexer.DOT_WITHOUT_A_NUMBER:
-                System.err.println("Find a not allowed caracter '.'.");
-                break;
+                return "Find a not allowed caracter '.'.";
             case Lexer.ILLEGAL_NUMBER_OF_PARENTHESIS:
-                System.err.println("Some parenthesis are not closed.");
-                break;
+                return "Some parenthesis are not closed.";
             case Lexer.ILLEGAL_POSITION_OF_PARENTHESIS:
-                System.err.println("A parenthesis has been closed without been opened.");
-                break;
+                return "A parenthesis has been closed without been opened.";
             case Lexer.FUNCTION_WITHOUT_PARENTHESIS:
-                System.err.println("A function has been detected without a parenthesis.");
-                break;
+                return "A function has been detected without a parenthesis.";
             case Lexer.ILLEGAL_NUMBER_POSITION:
-                System.err.println("A number has been detected to a wrong position.");
-                break;
+                return "A number has been detected to a wrong position.";
             case Lexer.POWER_AFTER_ILLEGAL_CHARACTER:
-                System.err.println("Find a not allowed caracter '^'.");
-                break;
+                return "Find a not allowed caracter '^'.";
             case Lexer.UNKNOW_PARSING_ERROR:
-                System.err.println("Unknow parsing error.");
-                break;
+                return "Unknow parsing error.";
             default:
-                System.err.println("Unknow error.");
-                break;
+                return "Unknow error.";
         }
-    }    
-
+    }
+    
     @FXML
     private void handleExpressionAction(KeyEvent event) {
-        
+        if(event.getCode().equals(KeyCode.ENTER)) {
+            this.answer.setText(this.calculate(this.expression.getText()));
+        }
     }
 
     @FXML
@@ -243,6 +232,7 @@ public class SampleController implements Initializable {
 
     @FXML
     private void handleCalculateAction(MouseEvent event) {
+        this.answer.setText(this.calculate(this.expression.getText()));
     }
 
     @FXML
