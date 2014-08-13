@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/calculator/Calculator.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/node/Divide.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/node/Power.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/leaf/Value.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/analyser/Analyser.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/Leaf.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/lexer/LexerType.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/utils/Operator.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/Node.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/utils/Trio.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/lexer/LexerGrammar.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/node/Minus.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/node/Plus.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/utils/Token.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/lexer/Lexer.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/analyser/Priority.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/utils/Duo.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/utils/StringUtils.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/calculator/SampleController.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/node/Multiply.java</file>
+            <file>file:/D:/Java/Calculator/src/fr/alsace/lacroix/tree/leaf/SquareRoot.java</file>
+        </group>
+    </open-files>
+</project-private>
