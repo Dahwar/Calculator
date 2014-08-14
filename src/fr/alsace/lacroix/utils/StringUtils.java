@@ -40,7 +40,7 @@ public class StringUtils {
     }
     
     public static String eraseAtSpecialPosition(String s, int position, int n) {
-        if(s.length() <= 1) {
+        if(s.length() <= n) {
             return "";
         } else if(position <= 0) {
             return s;
