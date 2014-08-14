@@ -191,7 +191,8 @@ public class Lexer implements Iterable<Token> {
                                             && !getLastToken().getOperator().equals(LexerGrammar.MULTIPLY)
                                             && !getLastToken().getOperator().equals(LexerGrammar.MINUS)
                                             && !getLastToken().getOperator().equals(LexerGrammar.PLUS)
-                                            && !getLastToken().getOperator().equals(LexerGrammar.SQUARE_ROOT))) {
+                                            && !getLastToken().getOperator().equals(LexerGrammar.SQUARE_ROOT)
+                                            && !getLastToken().getOperator().equals(LexerGrammar.POWER))) {
                                 this.tokens.add(new Token(actualChar, LexerType.CLOSING_PARENTHESIS));
                             } else {
                                 return CLOSING_PARENTHESIS_AFTER_ILLEGAL_CHARACTER;

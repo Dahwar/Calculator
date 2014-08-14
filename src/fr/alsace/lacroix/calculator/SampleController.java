@@ -70,15 +70,11 @@ public class SampleController implements Initializable {
     @FXML
     private TextField answer;
     
+    private int getInsertionPosition;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Lexer lexer = new Lexer("-365.36+5.2(-8.2-(2+3))-((2+3)*5)((sqrt(9^7)*2+3)-6/(2/3))/(-7.5)^2");
-        // Lexer lexer = new Lexer("-365.36+5.2(-8.2-(2+3))-((2+3)*5)");
-        // Lexer lexer = new Lexer("3+4(7+2)-3(4+3)");
-        // Lexer lexer = new Lexer("3-(4+3)-4*3(2+3)+sqrt(4)");
-        // Lexer lexer = new Lexer("-365+5(-8-(2+3))-((2+3)*5)((sqrt(sqrt((2+3)^5)^(7^2))*2+3)-6/(2/3))/(-7)^2");
-        // Lexer lexer = new Lexer("3-7-5");
-        // Lexer lexer = new Lexer("sqrt(sqrt(81))");
+        this.getInsertionPosition = 0;
     }    
 
     public String calculate(String s) {
@@ -129,105 +125,130 @@ public class SampleController implements Initializable {
         }
     }
 
+    private void addText(String s) {
+        this.expression.setText(StringUtils.insertInSpecialPosition(this.expression.getText(), s, this.getInsertionPosition));
+    }
+    
     @FXML
     private void handleOneAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "1");
+        this.addText("1");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleTwoAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "2");
+        this.addText("2");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleThreeAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "3");
+        this.addText("3");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handlePlusAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "+");
+        this.addText("+");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleFourAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "4");
+        this.addText("4");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleFiveAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "5");
+        this.addText("5");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleSixAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "6");
+        this.addText("6");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleMinusAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "-");
+        this.addText("-");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleSevenAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "7");
+        this.addText("7");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleEightAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "8");
+        this.addText("8");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleNineAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "9");
+        this.addText("9");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleMultiplyAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "*");
+        this.addText("*");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleCancelAction(MouseEvent event) {
-        this.expression.setText(StringUtils.eraseLastChars(this.expression.getText(), 1));
+        this.expression.setText(StringUtils.eraseAtSpecialPosition(this.expression.getText(), this.getInsertionPosition, 1));
+        if(this.getInsertionPosition > 0) {
+            this.getInsertionPosition--;
+        }
     }
 
     @FXML
     private void handleZeroAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "0");
+        this.addText("0");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleDotAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + ".");
+        this.addText(".");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleDivideAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "/");
+        this.addText("/");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleOpeningParenthesisAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "(");
+        this.addText("(");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handleClosingParenthesisAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + ")");
+        this.addText(")");
+        this.getInsertionPosition++;
     }
 
     @FXML
     private void handlePowerAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "^");
+        this.addText("^");
+        this.getInsertionPosition++;
     }
-
 
     @FXML
     private void handleEraseAction(MouseEvent event) {
         this.expression.setText("");
+        this.getInsertionPosition = 0;
     }
 
     @FXML
@@ -237,6 +258,12 @@ public class SampleController implements Initializable {
 
     @FXML
     private void handleSquareRootAction(MouseEvent event) {
-        this.expression.setText(this.expression.getText() + "sqrt(");
+        this.addText("sqrt(");
+        this.getInsertionPosition+=5;
+    }
+
+    @FXML
+    private void handleGetCaret(MouseEvent event) {
+        this.getInsertionPosition = this.expression.getCaretPosition();
     }
 }
