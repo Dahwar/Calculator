@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="381.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.alsace.lacroix.calculator.SampleController">
+<AnchorPane id="AnchorPane" minHeight="241.0" minWidth="287.0" prefHeight="241.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.alsace.lacroix.calculator.SampleController">
    <children>
       <BorderPane layoutX="46.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -39,7 +39,7 @@
                      <children>
                         <Button fx:id="oneButton" layoutX="10.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleOneAction" text="1" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -51,7 +51,7 @@
                      <children>
                         <Button fx:id="twoButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleTwoAction" text="2" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -63,7 +63,7 @@
                      <children>
                         <Button fx:id="threeButton" layoutX="21.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleThreeAction" text="3" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -75,7 +75,7 @@
                      <children>
                         <Button fx:id="plusButton" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handlePlusAction" text="+" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -87,7 +87,7 @@
                      <children>
                         <Button fx:id="fourButton" layoutX="10.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleFourAction" text="4" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -99,7 +99,7 @@
                      <children>
                         <Button fx:id="fiveButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleFiveAction" text="5" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -111,7 +111,7 @@
                      <children>
                         <Button fx:id="sixButton" layoutX="11.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleSixAction" text="6" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -123,7 +123,7 @@
                      <children>
                         <Button fx:id="minusButton" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleMinusAction" text="-" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -135,7 +135,7 @@
                      <children>
                         <Button fx:id="sevenButton" layoutX="10.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleSevenAction" text="7" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -147,7 +147,7 @@
                      <children>
                         <Button fx:id="eightButton" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#handleEightAction" text="8" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -159,7 +159,7 @@
                      <children>
                         <Button fx:id="nineButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleNineAction" text="9" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -171,7 +171,7 @@
                      <children>
                         <Button fx:id="multiplyButton" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleMultiplyAction" text="*" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -183,7 +183,7 @@
                      <children>
                         <Button fx:id="cancelButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleCancelAction" text="C" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -195,7 +195,7 @@
                      <children>
                         <Button fx:id="zeroButton" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#handleZeroAction" text="0" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -207,7 +207,7 @@
                      <children>
                         <Button fx:id="dotButton" layoutX="-12.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#handleDotAction" text="." textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -219,7 +219,7 @@
                      <children>
                         <Button fx:id="divideButton" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#handleDivideAction" text="/" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -234,7 +234,7 @@
                      <children>
                         <Button fx:id="openingParenthesisButton" layoutX="2.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#handleOpeningParenthesisAction" text="(" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -246,7 +246,7 @@
                      <children>
                         <Button fx:id="closingParenthesisButton" layoutX="2.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#handleClosingParenthesisAction" text=")" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font name="Calibri" size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -260,6 +260,13 @@
                      <padding>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                      </padding>
+                     <children>
+                        <Button fx:id="answerButton" layoutX="-2.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#handleAnswerAction" text="Ans" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
                      <padding>
@@ -268,7 +275,7 @@
                      <children>
                         <Button fx:id="powerButton" layoutX="-15.0" layoutY="-2.0" mnemonicParsing="false" onMouseClicked="#handlePowerAction" text="^" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -280,7 +287,7 @@
                      <children>
                         <Button fx:id="squareRootButton" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#handleSquareRootAction" text="sqrt" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -292,7 +299,7 @@
                      <children>
                         <Button fx:id="eraseButton" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#handleEraseAction" text="E" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -304,7 +311,7 @@
                      <children>
                         <Button fx:id="calculateButton" layoutX="4.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#handleCalculateAction" text="=" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Calibri" size="14.0" />
                            </font>
                         </Button>
                      </children>
@@ -328,11 +335,17 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="answer" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="93.0" layoutY="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Label fx:id="answer" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="11.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <font>
                                     <Font name="Courier New" size="14.0" />
                                  </font>
-                              </TextField>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
                            </children>
                         </AnchorPane>
                      </children>
