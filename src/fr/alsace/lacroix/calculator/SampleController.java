@@ -79,6 +79,8 @@ public class SampleController implements Initializable {
     private int getInsertionPosition;
     private boolean eraseExpression;
     private boolean error;
+    @FXML
+    private Button piButton;
     
     
     @Override
@@ -159,6 +161,8 @@ public class SampleController implements Initializable {
         } else {
             s = s.replace("Ans", "0");
         }
+        
+        s = s.replace("Pi", Double.toString(Math.PI));
         
         String r = this.calculate(s);
         
@@ -354,6 +358,13 @@ public class SampleController implements Initializable {
     private void handleAnswerAction(MouseEvent event) {
         this.doErase();
         this.addText("Ans");
+        this.eraseExpression = false;
+    }
+
+    @FXML
+    private void handlePiAction(MouseEvent event) {
+        this.doErase();
+        this.addText("Pi");
         this.eraseExpression = false;
     }
 }
